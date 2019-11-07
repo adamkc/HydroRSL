@@ -1,0 +1,3 @@
+removettsMenu <-
+function () 
+winMenuDel("TTS")
