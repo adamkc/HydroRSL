@@ -1,3 +1,11 @@
+#' AIC from linear model
+#'
+#' @param lmfit A model file
+#'
+#' @return c(aic,aic.c)
+#' @export
+#'
+#' @examples
 aic.lm <-
 function (lmfit) 
 {
