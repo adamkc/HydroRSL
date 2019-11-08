@@ -1,1 +1,15 @@
 exportPattern("^[[:alpha:]]+")
+import("rpanel")
+importFrom("chron", "chron","years","days","dates")
+importFrom("grDevices", "dev.list", "dev.off", "win.graph")
+importFrom("graphics", "abline", "axis", "box", "grid", "identify",
+           "layout", "legend", "lines", "locator", "mtext", "par",
+           "plot", "plot.default", "points", "segments", "strheight",
+           "text", "text.default", "title")
+importFrom("stats", "approx", "coef", "cor", "density", "fitted", "lm",
+           "loess", "loess.smooth", "na.omit", "nls", "pnorm",
+           "predict", "qnorm", "qt", "quantile", "resid",
+           "scatter.smooth", "splinefun", "uniroot", "window")
+importFrom("utils", "count.fields", "page", "read.csv", "read.table",
+           "winDialog", "winMenuAdd", "winMenuAddItem", "winMenuDel",
+           "write.table")
