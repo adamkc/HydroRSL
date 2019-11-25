@@ -1,6 +1,6 @@
 exportPattern("^[[:alpha:]]+")
 importFrom("chron", "chron","years","days","dates")
-importFrom("grDevices", "dev.list", "dev.off", "win.graph")
+importFrom("grDevices", "dev.list", "dev.off")
 importFrom("graphics", "abline", "axis", "box", "grid", "identify",
            "layout", "legend", "lines", "locator", "mtext", "par",
            "plot", "plot.default", "points", "segments", "strheight",
