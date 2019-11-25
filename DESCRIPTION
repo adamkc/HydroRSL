@@ -1,12 +1,12 @@
 Package: HydroRSL
 Type: Package
-Title: What the package does (short line)
+Title: Redwood Sciences Hydrology Functions
 Version: 1.0
 Date: 2019-11-01
 Author: Who wrote it
 Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
+Description: Functions to import and manipulate hydrology and sediment data.
 License: What license is it under?
 RoxygenNote: 6.1.1
 Imports: 
-    chron
+    chron,grDevices,stats,utils
