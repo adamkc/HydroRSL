@@ -3,7 +3,7 @@ function (stn, hy, sdate1, stime1, edate1, etime1, sdate2 = sdate1,
     stime2 = stime1, edate2 = edate1, etime2 = etime1, dumps, 
     bottles, interval = 10, exclude = TRUE, long = T, adj = T, 
     var = T, type = "linear", bias = "mvue", units = "cfs", span = 1, 
-    degree = 1, comp = F, oldcomp = F, opt = c(0, 0)) 
+    degree = 1, comp = F, oldcomp = F, opt = c(0, 0),sedData=NULL,flowData=NULL) 
 {
     args <- as.list(match.call())
     for (vname in c("dumps", "bottles", "interval", "span", "degree", 
@@ -32,8 +32,15 @@ function (stn, hy, sdate1, stime1, edate1, etime1, sdate2 = sdate1,
     bias <- NULL
     hy <- zfill(hy, 2)
     k <- 0.06 * interval
-    pop <- eval(as.name(paste(stn, hy, ".flo", sep = "")))
-    sam <- eval(as.name(paste(stn, hy, ".sed", sep = "")))
+    
+    if(!is.null(flowData) & !is.null(sedData)){
+        sam <- sedData
+        pop <- flowData
+    } else{
+        pop <- eval(as.name(paste(stn, hy, ".flo", sep = "")))
+        sam <- eval(as.name(paste(stn, hy, ".sed", sep = "")))
+    }
+    
     if (missing(dumps) && missing(bottles)) {
         sam <- subtime(sam, sdate2, stime2, edate2, etime2)
     }

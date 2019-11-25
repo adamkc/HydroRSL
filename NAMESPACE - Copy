@@ -1,4 +1,5 @@
 exportPattern("^[[:alpha:]]+")
+import("rpanel")
 importFrom("chron", "chron","years","days","dates")
 importFrom("grDevices", "dev.list", "dev.off", "win.graph")
 importFrom("graphics", "abline", "axis", "box", "grid", "identify",

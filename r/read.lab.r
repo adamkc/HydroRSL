@@ -1,9 +1,17 @@
 read.lab <-
-function (stn, hy, ttshome = getTTSenv("TTSHOME")) 
+function (stn, hy, ttshome = getTTSenv("TTSHOME"),fileLoc=NULL) 
 {
-    file <- paste(stn, zfill(hy, 2), ".isc", sep = "")
-    rawdir <- paste("raw", zfill(hy, 2), sep = "")
-    full.name <- paste(ttshome, stn, rawdir, file, sep = "/")
+    if(!is.null(fileLoc)){
+        full.name <- fileLoc
+        stn <- substr(basename(fileLoc),start = 1,stop = 3)
+        hy <-  substr(basename(fileLoc),start = 4,stop = 5)
+    } else {
+        file <- paste(stn, zfill(hy, 2), ".isc", sep = "")
+        rawdir <- paste("raw", zfill(hy, 2), sep = "")
+        full.name <- paste(ttshome, stn, rawdir, file, sep = "/")
+    }
+    
+    
     if (!file.exists(full.name)) {
         print(paste(full.name, "does not exist"))
         return(NULL)

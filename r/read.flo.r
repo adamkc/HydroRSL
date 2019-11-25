@@ -1,8 +1,14 @@
 read.flo <-
-function (stn, hy, ttshome = getTTSenv("TTSHOME")) 
+function (stn, hy, ttshome = getTTSenv("TTSHOME"),fileLoc=NULL) 
 {
-    file <- paste(stn, zfill(hy, 2), ".flo", sep = "")
-    abs.path <- paste(ttshome, stn, file, sep = "/")
+    if(!is.null(fileLoc)){
+        abs.path <- fileLoc
+        stn <- substr(basename(fileLoc),start = 1,stop = 3)
+        hy <-  substr(basename(fileLoc),start = 4,stop = 5)
+    } else {
+        file <- paste(stn, zfill(hy, 2), ".flo", sep = "")
+        abs.path <- paste(ttshome, stn, file, sep = "/")
+    }
     columns <- c("year", "mo", "dy", "time", "dump", "bottle", 
         "codes", "rawstg", "stg", "stgcode", "q", "rawturb", 
         "turb", "turbcode")

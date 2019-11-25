@@ -2,8 +2,9 @@ dis.adjust <-
 function (stn, ssc) 
 {
     S <- toupper(stn)
-    if (!exists("discoef")) 
-        stop("Need 'discoef' data frame to make DI sample adjustments")
+    if (!exists("discoef"))
+        loadDiscoef()
+        #stop("Need 'discoef' data frame to make DI sample adjustments")
     if (S %in% row.names(discoef)) {
         a <- discoef[S, "a"]
         b <- discoef[S, "b"]

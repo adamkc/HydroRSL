@@ -1,0 +1,32 @@
+I attached the workspace and a couple example data files for station ogi, hydroyear 14. Also, there may be functions loaded from the more generic workspace also attached.
+
+ogi14.flo <- read.flo("ogi",14) #reads in ‘flo’ file with the stage (stg) and flow (q) in it
+ogi14.lab <- read.lab("ogi",14) #reads in ssc data file “ogi14.isc”
+ogi14.sed <- merge.flo("ogi",14)  #station is ‘ogi’; hydrologic year is 14; this xxxxx.sed file is used I think in the rest
+
+tts0 <- turbsrc("ogi",14,140208,540,140212,630,type="linear") #creates regression model
+ttsplot("ogi",14,tts0) #plots using calculated flow from stage
+total(tts0) #output table, with calculated load (using flow: basically the sum of all (ssc*q) in a time period)
+
+Thanks for your help. I’m taking off now, but see you Monday.
+
+ 
+Jayme Seehafer 
+Sediment Lab Manager
+Forest Service 
+Redwood Sciences Lab, Pacific Southwest Research Station
+p: 707-825-2982 
+jayme.e.seehafer@usda.gov
+1700 Bayview Drive
+Arcata, CA 95521
+www.fs.fed.us 
+   
+Caring for the land and serving people
+
+----------------------------------------------
+QUE station’s flow (q) should be station SFC’s q minus OGI’s q. So in case you get really interested, the SFC and QUE files are attached too. 
+
+The q in the QUE file is actually the subtraction method q (the correct one), so another option might be to use q directly from the file and avoid reading in the two other stations.
+
+
+

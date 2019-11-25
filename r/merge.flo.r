@@ -1,8 +1,16 @@
 merge.flo <-
-function (stn, hy, all.lab = F, all.flo = F, na.rm = T) 
+function (stn, hy, all.lab = F,
+          all.flo = F, na.rm = T,
+          flowData=NULL,labData=NULL) 
 {
-    lab <- eval(as.name(paste(stn, zfill(hy, 2), ".lab", sep = "")))
-    flo <- eval(as.name(paste(stn, zfill(hy, 2), ".flo", sep = "")))
+    if(!is.null(flowData) & !is.null(labData)){
+        lab <- labData
+        flo <- flowData
+    } else{
+        lab <- eval(as.name(paste(stn, zfill(hy, 2), ".lab", sep = "")))
+        flo <- eval(as.name(paste(stn, zfill(hy, 2), ".flo", sep = "")))
+    }
+    
     flo <- flo[flo$bottle > 0, ]
     newdata <- suppressWarnings(merge(lab, flo, by = c("dump", 
         "bottle"), all.x = all.lab, all.y = all.flo))

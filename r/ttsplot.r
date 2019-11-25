@@ -2,8 +2,10 @@ ttsplot <-
 function (stn, hy, ..., stagetics = seq(0, 4, 0.1), adj = T, 
     number = T, units = "cfs", split = 0.35, grid1, grid2) 
 {
-    arglist <- as.list(match.call()[-1])
-    predobj <- as.list(match.call(expand.dots = F)$...)
+    arglist <- as.list(match.call()[-1]) #collect Args
+    #Collect ... args (i.e. turbsrc objects):
+    predobj <- as.list(match.call(expand.dots = F)$...) 
+print(units)
     msc.n <- 0
     tts.n <- 0
     n <- 0
@@ -30,5 +32,6 @@ function (stn, hy, ..., stagetics = seq(0, 4, 0.1), adj = T,
         }
         else stop(paste("Inappropriate prediction object", deparse(substitute(name))))
     }
+    #print(arglist)
     do.call("oldttsplot", arglist)
 }
