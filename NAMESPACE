@@ -10,5 +10,4 @@ importFrom("stats", "approx", "coef", "cor", "density", "fitted", "lm",
            "predict", "qnorm", "qt", "quantile", "resid",
            "scatter.smooth", "splinefun", "uniroot", "window")
 importFrom("utils", "count.fields", "page", "read.csv", "read.table",
-           "winDialog", "winMenuAdd", "winMenuAddItem", "winMenuDel",
            "write.table")
