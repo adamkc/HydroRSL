@@ -1,3 +1,17 @@
+#' merge.flo
+#'
+#' @param stn 
+#' @param hy 
+#' @param all.lab 
+#' @param all.flo 
+#' @param na.rm 
+#' @param flowData 
+#' @param labData 
+#'
+#' @return
+#' @export
+#'
+#' @examples
 merge.flo <-
 function (stn, hy, all.lab = F,
           all.flo = F, na.rm = T,

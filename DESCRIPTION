@@ -7,6 +7,6 @@ Author: Who wrote it
 Maintainer: Who to complain to <yourfault@somewhere.net>
 Description: Functions to import and manipulate hydrology and sediment data.
 License: What license is it under?
-RoxygenNote: 6.1.1
+RoxygenNote: 7.0.1
 Imports: 
     chron,grDevices,stats,utils

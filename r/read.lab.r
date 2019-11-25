@@ -1,3 +1,15 @@
+#' read.lab
+#'
+#' @param stn 
+#' @param hy 
+#' @param ttshome 
+#' @param fileLoc 
+#'
+#' @return
+#' @export
+#'
+#' @examples
+#' 
 read.lab <-
 function (stn, hy, ttshome = getTTSenv("TTSHOME"),fileLoc=NULL) 
 {

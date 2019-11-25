@@ -1,3 +1,14 @@
+#' read.flo
+#'
+#' @param stn 
+#' @param hy 
+#' @param ttshome 
+#' @param fileLoc 
+#'
+#' @return
+#' @export
+#'
+#' @examples
 read.flo <-
 function (stn, hy, ttshome = getTTSenv("TTSHOME"),fileLoc=NULL) 
 {
