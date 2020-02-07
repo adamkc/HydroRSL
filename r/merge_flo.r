@@ -1,4 +1,4 @@
-#' merge.flo
+#' merge_flo
 #'
 #' @param stn 
 #' @param hy 
@@ -12,7 +12,7 @@
 #' @export
 #'
 #' @examples
-merge.flo <-
+merge_flo <-
 function (stn, hy, all.lab = F,
           all.flo = F, na.rm = T,
           flowData=NULL,labData=NULL) 

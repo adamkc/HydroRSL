@@ -5,7 +5,7 @@ function (hy, stations, match = T, opt = 0)
     alltimes <- NULL
     for (STN in stations) {
         stn <- tolower(STN)
-        data <- read.flo(stn, hy)
+        data <- read_flo(stn, hy)
         sd <- read.allstorms(stn, hy, match)
         nstorms <- dim(sd)[[1]]
         turb <- numeric(nstorms)

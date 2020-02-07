@@ -1,4 +1,4 @@
-#' read.lab
+#' read_lab
 #'
 #' @param stn 
 #' @param hy 
@@ -10,7 +10,7 @@
 #'
 #' @examples
 #' 
-read.lab <-
+read_lab <-
 function (stn, hy, ttshome = getTTSenv("TTSHOME"),fileLoc=NULL) 
 {
     if(!is.null(fileLoc)){

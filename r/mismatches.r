@@ -1,9 +1,9 @@
 mismatches <-
 function (stn, hy) 
 {
-    tmp1 <- merge.flo(stn, hy, all.lab = T, na.rm = F)
-    tmp2 <- merge.flo(stn, hy, all.flo = T, na.rm = F)
-    tmp3 <- merge.flo(stn, hy, na.rm = F)
+    tmp1 <- merge_flo(stn, hy, all.lab = T, na.rm = F)
+    tmp2 <- merge_flo(stn, hy, all.flo = T, na.rm = F)
+    tmp3 <- merge_flo(stn, hy, na.rm = F)
     row.names(tmp1) <- paste(tmp1$dump, tmp1$bottle, sep = ":")
     row.names(tmp2) <- paste(tmp2$dump, tmp2$bottle, sep = ":")
     row.names(tmp3) <- paste(tmp3$dump, tmp3$bottle, sep = ":")

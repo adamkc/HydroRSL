@@ -1,7 +1,7 @@
 dailystats <-
 function (stn, hy) 
 {
-    data <- read.flo(stn, hy)
+    data <- read_flo(stn, hy)
     day <- dates(data$chr)
     meandaily <- tapply(data$q, day, mean, na.rm = T)
     mindaily <- tapply(data$q, day, min, na.rm = T)

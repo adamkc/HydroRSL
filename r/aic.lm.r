@@ -6,7 +6,7 @@
 #' @export
 #'
 #' @examples
-aic.lm <-
+aic_lm <-
 function (lmfit) 
 {
     if (class(lmfit) != "lm") 

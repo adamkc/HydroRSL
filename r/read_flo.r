@@ -1,4 +1,4 @@
-#' read.flo
+#' read_flo
 #'
 #' @param stn 
 #' @param hy 
@@ -9,7 +9,7 @@
 #' @export
 #'
 #' @examples
-read.flo <-
+read_flo <-
 function (stn, hy, ttshome = getTTSenv("TTSHOME"),fileLoc=NULL) 
 {
     if(!is.null(fileLoc)){

@@ -17,7 +17,7 @@ function (hy, stations)
     for (STN in stations) {
         stn <- tolower(STN)
         STN <- toupper(STN)
-        data <- read.flo(stn, hy)
+        data <- read_flo(stn, hy)
         sd <- read.allstorms(stn, hy, match = F)
         nstorms <- dim(sd)[[1]]
         if (nstorms == 0) 
